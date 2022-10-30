@@ -20,8 +20,6 @@ function init() {
     }
   })
 
-  const volume_slider = document.getElementById('volume');
-
   const sound = document.querySelector('button');
   sound.addEventListener('click', function() {
     let option = selector.value;
@@ -37,16 +35,33 @@ function init() {
     // volume_controls.addEventListener('input', function() {
     //   alert(volume_controls.src);
     // })
-    let volval = volume_slider.value;
-    if (volval == 0) {
+    
+    const volume_slider = document.getElementById('volume');
+  let volval = volume_slider.value;
 
+  const volIcon = document.getElementsByTagName("img")[1];
+  volume_slider.addEventListener('change', function(e) {
+    volval = e.currentTarget.value;
+    if (volval == 0) {
+      volIcon.src = 'assets/icons/volume-level-0.svg';
     }
+    if (volval >=1 && volval < 33) {
+      volIcon.src = 'assets/icons/volume-level-1.svg';
+    }
+    if (volval >=33 && volval < 67) {
+      volIcon.src = 'assets/icons/volume-level-2.svg';
+    }
+    if (volval >=67) {
+      volIcon.src = 'assets/icons/volume-level-3.svg';
+    }
+  })
+    
     music.volume = volval/100;
 
     music.play();
   }) 
 
-
+  
 
   // const sound = document.querySelector('button');
   // sound.addEventListener('click', function() {
