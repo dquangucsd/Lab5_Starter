@@ -53,6 +53,9 @@ function init() {
       music = new Audio('assets/audio/air-horn.mp3');
     } else if (option == 'party-horn') {
       music = new Audio('assets/audio/party-horn.mp3');
+      //confetti animation
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti();
     } else if (option == 'car-horn') {
       music = new Audio('assets/audio/car-horn.mp3');
     }
