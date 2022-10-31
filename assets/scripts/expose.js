@@ -36,7 +36,7 @@ function init() {
     //   alert(volume_controls.src);
     // })
     
-    const volume_slider = document.getElementById('volume');
+  const volume_slider = document.getElementById('volume');
   let volval = volume_slider.value;
 
   const volIcon = document.getElementsByTagName("img")[1];
