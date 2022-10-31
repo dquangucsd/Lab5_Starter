@@ -36,25 +36,25 @@ function init() {
     //   alert(volume_controls.src);
     // })
     
-  const volume_slider = document.getElementById('volume');
-  let volval = volume_slider.value;
+    const volume_slider = document.getElementById('volume');
+    let volval = volume_slider.value;
 
-  const volIcon = document.getElementsByTagName("img")[1];
-  volume_slider.addEventListener('change', function(e) {
-    volval = e.currentTarget.value;
-    if (volval == 0) {
-      volIcon.src = 'assets/icons/volume-level-0.svg';
-    }
-    if (volval >=1 && volval < 33) {
-      volIcon.src = 'assets/icons/volume-level-1.svg';
-    }
-    if (volval >=33 && volval < 67) {
-      volIcon.src = 'assets/icons/volume-level-2.svg';
-    }
-    if (volval >=67) {
-      volIcon.src = 'assets/icons/volume-level-3.svg';
-    }
-  })
+    const volIcon = document.getElementsByTagName("img")[1];
+    volume_slider.addEventListener('change', function(e) {
+      volval = e.currentTarget.value;
+      if (volval == 0) {
+        volIcon.src = 'assets/icons/volume-level-0.svg';
+      }
+      if (volval >=1 && volval < 33) {
+        volIcon.src = 'assets/icons/volume-level-1.svg';
+      }
+      if (volval >=33 && volval < 67) {
+        volIcon.src = 'assets/icons/volume-level-2.svg';
+      }
+      if (volval >=67) {
+        volIcon.src = 'assets/icons/volume-level-3.svg';
+      }
+    })
     
     music.volume = volval/100;
 
