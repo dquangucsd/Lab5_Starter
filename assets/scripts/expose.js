@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // TODO
+  const jsConfetti = new JSConfetti()
   const selector = document.getElementById('horn-select');
   selector.addEventListener('change', function() {
     let option = selector.value;
@@ -28,6 +29,8 @@ function init() {
       music = new Audio('assets/audio/air-horn.mp3');
     } else if (option == 'party-horn') {
       music = new Audio('assets/audio/party-horn.mp3');
+      
+      jsConfetti.addConfetti()
     } else if (option == 'car-horn') {
       music = new Audio('assets/audio/car-horn.mp3');
     }
